@@ -7,10 +7,20 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Open+Sans' %>
+    <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Saira+Extra+Condensed' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
+    <div class="container-fluid p-0">
+    <%= render "shared/navbar" %>
     <%= yield %>
+    <%= render "shared/experience" %>
+    <%= render "shared/education" %>
+    <%= render "shared/skills" %>
+    <!-- <%= render "shared/interests" %> -->
+    <!-- <%= render "shared/certifications" %> -->
+  </div>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
